@@ -67,7 +67,7 @@
     <img src="https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white&style=for-the-badge" />
   </a>
   <a href="https://youtube.com/@milansharmamusic" target="_blank">
-    <img src="https://img.shields.io/badge/YouTube-FF0000?logo=youtube&style=for-the-badge" />
+    <img src="https://img.shields.io/badge/YouTube 1-FF0000?logo=youtube&style=for-the-badge" />
   </a>
   <a href="https://music.apple.com/us/artist/milan-sharma/560619731" target="_blank">
     <img src="https://img.shields.io/badge/Apple_Music-FA243C?logo=apple&logoColor=white&style=for-the-badge" />
