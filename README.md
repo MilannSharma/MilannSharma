@@ -16,6 +16,13 @@
 
 ---
 
+## 📋Resume
+Click to View 👆
+![RESUME](Milan-Sharma.pdf)
+
+
+---
+
 ## 🧑‍💻 Languages
 <h3 align="left">Languages I Code In:</h3>  
 <p align="left">  
@@ -150,11 +157,6 @@
 </p>
 
 ![snake gif](https://github.com/MilannSharma/MilannSharma/blob/output/snake.svg)
-
----
-## 📋Resume
-Click to View 👆
-![RESUME](Milan-Sharma.pdf)
 
 
 ---
