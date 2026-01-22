@@ -152,7 +152,12 @@
 ![snake gif](https://github.com/MilannSharma/MilannSharma/blob/output/snake.svg)
 
 ---
+## 📋Resume
+Click to View 👆
+![RESUME](Milan-Sharma.pdf)
 
+
+---
 ## ☕ Support Me
 
 <h3 align="left">Support:</h3>
