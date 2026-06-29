@@ -1,6 +1,6 @@
 <p align="center">
   <img
-    src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/main/watermark-removed-Create_a_high_end_futuristic_c.gif"
+    src="watermark-removed-Create_a_high_end_futuristic_c.gif"
     alt="Milan Sharma Banner"
     width="100%"
   />
