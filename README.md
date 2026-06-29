@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="read.gif" alt="banner" />
+  <img src="watermark-removed-Create_a_high_end_futuristic_c.gif" alt="banner" />
 </p>
 
 <h1 align="center">Hi 👋, I'm Milan Sharma</h1>
