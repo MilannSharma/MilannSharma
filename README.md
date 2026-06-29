@@ -1,7 +1,10 @@
 <p align="center">
-  <img src="watermark-removed-Create_a_high_end_futuristic_c.gif" alt="banner" />
+  <img
+    src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/main/watermark-removed-Create_a_high_end_futuristic_c.gif"
+    alt="Milan Sharma Banner"
+    width="100%"
+  />
 </p>
-
 <h1 align="center">Hi 👋, I'm Milan Sharma</h1>
 <h3 align="center">Demonstrating Technical Expertise and Continuous Improvement</h3>
 
