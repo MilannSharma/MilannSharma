@@ -1,6 +1,6 @@
 <div align="center">
 
-  <!-- ANIMATED PIXEL HEADER GIF (ANIMATED MOVING BACKGROUND + PRESS START 2P PIXEL FONT) -->
+  <!-- ANIMATED PIXEL HEADER GIF (NO COMPANY NAMES, PIXEL FONT ONLY) -->
   <img src="https://raw.githubusercontent.com/MilannSharma/MilannSharma/main/pixel_header.gif" width="100%" alt="Milan Sharma Pixel Header Animation" style="border-radius:10px; max-width:850px;" />
 
   <br/><br/>
@@ -50,12 +50,12 @@
 
 # 🏢 Experience
 
-### **Product Manager** | Schoollog, Jaipur *(Feb 2026 – Present)*
+### **Technical Product Manager** *(Feb 2026 – Present)*
 - 🎯 **Roadmaps & PRDs**: Own product roadmap and PRDs for an AI/data platform; define KPIs and OKRs, lead sprint planning and backlog grooming.
 - 🚀 **0-to-1 Product Launch**: Led end-to-end 0-to-1 build and launch of a new AI/SaaS product from scratch, including ERP-integrated workflows.
-- 📈 **Impact**: Shipped an LLM-powered analytics workflow, **cutting analyst time-to-insight by ~35%** and **lifting non-technical adoption by ~30%** in one quarter.
+- 📈 **Impact**: Shipped an LLM-powered analytics workflow, **cutting analyst time-to-insight by ~35%** and **lifting adoption by ~30%** in one quarter.
 
-### **AI & Data Science Intern** | Upflairs Pvt Ltd, Jaipur *(Jul 2024 – Aug 2024)*
+### **AI & Data Science Specialist** *(Jul 2024 – Aug 2024)*
 - ⚡ **ETL & ML Automation**: Built end-to-end ML pipelines (Python, Pandas, Scikit-Learn); automated ETL workflows, cutting manual processing time by **~30%**.
 
 ---
