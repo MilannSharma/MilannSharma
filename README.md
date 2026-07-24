@@ -1,7 +1,7 @@
 <div align="center">
 
-  <!-- HERO VIDEO SECTION -->
-  <video src="https://raw.githubusercontent.com/MilannSharma/MilannSharma/main/hero_video.mp4" autoplay loop muted playsinline width="100%" style="border-radius:12px; border:2px solid #30363d; max-width:850px;"></video>
+  <!-- HERO ANIMATED VIDEO GIF -->
+  <img src="https://raw.githubusercontent.com/MilannSharma/MilannSharma/main/hero_video.gif" width="100%" alt="Hero Video Animation" style="border-radius:12px; border:2px solid #30363d; max-width:850px;" />
 
   <br/><br/>
 
