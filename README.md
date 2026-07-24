@@ -1,7 +1,7 @@
 <div align="center">
 
-  <!-- ANIMATED HERO ILLUSTRATION (CODER & INNOVATOR) -->
-  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="600" alt="Coder Innovator Hero Animation" style="border-radius:12px;" />
+  <!-- HERO VIDEO SECTION -->
+  <video src="https://raw.githubusercontent.com/MilannSharma/MilannSharma/main/hero_video.mp4" autoplay loop muted playsinline width="100%" style="border-radius:12px; border:2px solid #30363d; max-width:850px;"></video>
 
   <br/><br/>
 
@@ -12,14 +12,18 @@
     <strong>Technical Product Manager • Coder & Innovator • GenAI & Data Platform Architect</strong>
   </p>
 
-  <!-- CLEAN BUTTONS: DOWNLOAD RESUME & PLAY GAME -->
+  <!-- ACTION BUTTONS: RESUME, CHROME DINO, & ML TRAINER GAME -->
   <p align="center">
     <a href="https://raw.githubusercontent.com/MilannSharma/MilannSharma/main/resume.md" target="_blank">
       <img src="https://img.shields.io/badge/📄%20Download%20Resume-FF5722?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" height="42" alt="Download Resume" />
     </a>
-    &nbsp;&nbsp;
+    &nbsp;
     <a href="https://htmlpreview.github.io/?https://github.com/MilannSharma/MilannSharma/blob/main/game.html" target="_blank">
-      <img src="https://img.shields.io/badge/🎮%20Play%20Game-2EA043?style=for-the-badge&logo=gamepad&logoColor=white" height="42" alt="Play Game" />
+      <img src="https://img.shields.io/badge/🎮%20Play%20Chrome%20Dino-2EA043?style=for-the-badge&logo=gamepad&logoColor=white" height="42" alt="Play Chrome Dino" />
+    </a>
+    &nbsp;
+    <a href="https://htmlpreview.github.io/?https://github.com/MilannSharma/MilannSharma/blob/main/ml_game.html" target="_blank">
+      <img src="https://img.shields.io/badge/🤖%20Play%20ML%20Trainer-009688?style=for-the-badge&logo=pytorch&logoColor=white" height="42" alt="Play ML Trainer" />
     </a>
   </p>
 
@@ -68,6 +72,35 @@ print(me.get_value_prop())
 
 ### **AI & Data Science Intern** | Upflairs Pvt Ltd, Jaipur *(Jul 2024 – Aug 2024)*
 - ⚡ **ETL & ML Automation**: Built end-to-end ML pipelines (Python, Pandas, Scikit-Learn); automated ETL workflows, cutting manual processing time by **~30%**.
+
+---
+
+# 🎮 Interactive Mini Games
+
+<div align="center">
+
+  <table border="0">
+    <tr>
+      <td align="center" width="50%">
+        <h3>🦖 Chrome Dino Runner</h3>
+        <p>Retro 8-bit jump game. Set the high score!</p>
+        <br/>
+        <a href="https://htmlpreview.github.io/?https://github.com/MilannSharma/MilannSharma/blob/main/game.html" target="_blank">
+          <img src="https://img.shields.io/badge/🎮%20PLAY%20DINO%20GAME-2EA043?style=for-the-badge&logo=googlechrome&logoColor=white" height="40" />
+        </a>
+      </td>
+      <td align="center" width="50%">
+        <h3>🧠 ML Model Trainer Simulator</h3>
+        <p>Tune Learning Rate, Epochs & Neurons. Train AI live!</p>
+        <br/>
+        <a href="https://htmlpreview.github.io/?https://github.com/MilannSharma/MilannSharma/blob/main/ml_game.html" target="_blank">
+          <img src="https://img.shields.io/badge/🤖%20PLAY%20ML%20TRAINER-009688?style=for-the-badge&logo=pytorch&logoColor=white" height="40" />
+        </a>
+      </td>
+    </tr>
+  </table>
+
+</div>
 
 ---
 

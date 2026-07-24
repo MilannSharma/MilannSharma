@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Milan's AI Model Trainer Simulator 🧠⚡</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: 'Fira Code', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+      color: #58a6ff;
+      text-shadow: 0 0 12px rgba(88, 166, 255, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    p.subtitle {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #8b949e;
+      text-align: center;
+    }
+    #game-layout {
+      display: flex;
+      gap: 20px;
+      max-width: 1000px;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .panel {
+      background: #161b22;
+      border: 2px solid #30363d;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    }
+    #controls-panel {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    #viz-panel {
+      flex: 1.5;
+      min-width: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    label {
+      font-size: 0.85rem;
+      color: #58a6ff;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    select, input[type="range"] {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      color: #c9d1d9;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+    select:focus { border-color: #58a6ff; }
+    .val-badge {
+      float: right;
+      color: #238636;
+      font-weight: bold;
+    }
+    button.btn-train {
+      margin-top: 10px;
+      padding: 14px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #ffffff;
+      background: linear-gradient(135deg, #238636, #2ea043);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(46, 160, 67, 0.4);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    button.btn-train:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(46, 160, 67, 0.6);
+    }
+    button.btn-train:disabled {
+      background: #21262d;
+      color: #8b949e;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+    canvas {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      width: 100%;
+    }
+    .metric-card {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+    }
+    .metric-card .title {
+      font-size: 0.75rem;
+      color: #8b949e;
+      text-transform: uppercase;
+    }
+    .metric-card .val {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #58a6ff;
+      margin-top: 4px;
+    }
+    #status-msg {
+      font-size: 0.95rem;
+      font-weight: bold;
+      min-height: 24px;
+      text-align: center;
+    }
+    .status-good { color: #3fb950; }
+    .status-bad { color: #f85149; }
+    .status-warn { color: #d29922; }
+
+    .back-btn {
+      margin-top: 25px;
+      display: inline-block;
+      padding: 10px 24px;
+      background: #21262d;
+      border: 1px solid #30363d;
+      color: #58a6ff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.2s ease;
+    }
+    .back-btn:hover {
+      background: #30363d;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧠 Milan's Neural Network Model Trainer</h1>
+  <p class="subtitle">Tune hyperparameters, train the neural net, and optimize model accuracy to 99.9%!</p>
+
+  <div id="game-layout">
+    
+    <!-- HYPERPARAMETER CONTROLS -->
+    <div id="controls-panel" class="panel">
+      <h3>🎛️ Hyperparameters</h3>
+
+      <div class="form-group">
+        <label>Dataset Target</label>
+        <select id="dataset">
+          <option value="mnist">MNIST Handwritten Digits</option>
+          <option value="vision">Real-Time Face Recognition</option>
+          <option value="trading">Stock Price Prediction (LSTM)</option>
+          <option value="farm">Crop Recommendation AI</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Optimizer</label>
+        <select id="optimizer">
+          <option value="adam">Adam (Recommended)</option>
+          <option value="rmsprop">RMSprop</option>
+          <option value="sgd">SGD (Stochastic Gradient Descent)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Learning Rate (α) <span id="lr-val" class="val-badge">0.01</span></label>
+        <input type="range" id="lr" min="0.001" max="0.5" step="0.005" value="0.01">
+      </div>
+
+      <div class="form-group">
+        <label>Hidden Layers / Neurons <span id="layers-val" class="val-badge">64</span></label>
+        <input type="range" id="layers" min="8" max="128" step="8" value="64">
+      </div>
+
+      <div class="form-group">
+        <label>Target Epochs <span id="epochs-val" class="val-badge">50</span></label>
+        <input type="range" id="epochs" min="10" max="150" step="10" value="50">
+      </div>
+
+      <button id="train-btn" class="btn-train" onclick="startTraining()">
+        🚀 TRAIN MODEL NOW
+      </button>
+    </div>
+
+    <!-- VISUALIZATION & METRICS -->
+    <div id="viz-panel" class="panel">
+      
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="title">Epoch</div>
+          <div id="m-epoch" class="val">0 / 50</div>
+        </div>
+        <div class="metric-card">
+          <div class="title">Loss</div>
+          <div id="m-loss" class="val">1.000</div>
+        </div>
+        <div class="metric-card">
+          <div class="title">Accuracy</div>
+          <div id="m-acc" class="val">0.0%</div>
+        </div>
+      </div>
+
+      <!-- LOSS GRAPH CANVAS -->
+      <canvas id="lossCanvas" width="420" height="160"></canvas>
+
+      <!-- NEURAL NET CANVAS -->
+      <canvas id="nnCanvas" width="420" height="150"></canvas>
+
+      <div id="status-msg" class="status-warn">Select parameters and press TRAIN MODEL</div>
+    </div>
+
+  </div>
+
+  <a class="back-btn" href="https://github.com/MilannSharma">← Back to Milan's GitHub Profile</a>
+
+  <script>
+    // Inputs & Sliders
+    const lrInput = document.getElementById('lr');
+    const lrVal = document.getElementById('lr-val');
+    const layersInput = document.getElementById('layers');
+    const layersVal = document.getElementById('layers-val');
+    const epochsInput = document.getElementById('epochs');
+    const epochsVal = document.getElementById('epochs-val');
+    const trainBtn = document.getElementById('train-btn');
+
+    lrInput.oninput = () => lrVal.textContent = lrInput.value;
+    layersInput.oninput = () => layersVal.textContent = layersInput.value;
+    epochsInput.oninput = () => epochsVal.textContent = epochsInput.value;
+
+    // Canvases
+    const lossCanvas = document.getElementById('lossCanvas');
+    const lossCtx = lossCanvas.getContext('2d');
+    const nnCanvas = document.getElementById('nnCanvas');
+    const nnCtx = nnCanvas.getContext('2d');
+
+    let isTraining = false;
+    let currentEpoch = 0;
+    let targetEpochs = 50;
+    let lossHistory = [];
+    let accHistory = [];
+    let animId = null;
+
+    // Draw Neural Net Architecture
+    function drawNeuralNet(active = false) {
+      nnCtx.clearRect(0, 0, nnCanvas.width, nnCanvas.height);
+      const layers = [4, 6, 6, 2];
+      const layerX = [60, 160, 260, 360];
+
+      // Draw Connections
+      for (let l = 0; l < layers.length - 1; l++) {
+        const count1 = layers[l];
+        const count2 = layers[l+1];
+        for (let i = 0; i < count1; i++) {
+          const y1 = 20 + i * (110 / (count1 - 1));
+          for (let j = 0; j < count2; j++) {
+            const y2 = 20 + j * (110 / (count2 - 1));
+            nnCtx.beginPath();
+            nnCtx.moveTo(layerX[l], y1);
+            nnCtx.lineTo(layerX[l+1], y2);
+            nnCtx.lineWidth = active ? Math.random() * 2 + 0.5 : 1;
+            nnCtx.strokeStyle = active ? `rgba(88, 166, 255, ${Math.random() * 0.7 + 0.2})` : '#21262d';
+            nnCtx.stroke();
+          }
+        }
+      }
+
+      // Draw Neurons
+      for (let l = 0; l < layers.length; l++) {
+        const count = layers[l];
+        for (let i = 0; i < count; i++) {
+          const y = 20 + i * (110 / (count - 1));
+          nnCtx.beginPath();
+          nnCtx.arc(layerX[l], y, 8, 0, Math.PI * 2);
+          nnCtx.fillStyle = active ? (Math.random() > 0.3 ? '#238636' : '#58a6ff') : '#30363d';
+          nnCtx.fill();
+          nnCtx.lineWidth = 2;
+          nnCtx.strokeStyle = active ? '#58a6ff' : '#8b949e';
+          nnCtx.stroke();
+        }
+      }
+    }
+
+    // Draw Loss & Accuracy Chart
+    function drawChart() {
+      lossCtx.clearRect(0, 0, lossCanvas.width, lossCanvas.height);
+
+      // Grid Lines
+      lossCtx.strokeStyle = '#21262d';
+      lossCtx.lineWidth = 1;
+      for (let y = 30; y < lossCanvas.height; y += 30) {
+        lossCtx.beginPath();
+        lossCtx.moveTo(0, y);
+        lossCtx.lineTo(lossCanvas.width, y);
+        lossCtx.stroke();
+      }
+
+      if (lossHistory.length < 2) return;
+
+      const w = lossCanvas.width;
+      const h = lossCanvas.height - 20;
+
+      // Draw Loss Line (Red/Orange)
+      lossCtx.beginPath();
+      lossCtx.strokeStyle = '#f85149';
+      lossCtx.lineWidth = 3;
+      lossHistory.forEach((val, i) => {
+        const x = (i / (targetEpochs - 1)) * w;
+        const y = h - (val * (h - 20));
+        if (i === 0) lossCtx.moveTo(x, y);
+        else lossCtx.lineTo(x, y);
+      });
+      lossCtx.stroke();
+
+      // Draw Accuracy Line (Green)
+      lossCtx.beginPath();
+      lossCtx.strokeStyle = '#3fb950';
+      lossCtx.lineWidth = 3;
+      accHistory.forEach((val, i) => {
+        const x = (i / (targetEpochs - 1)) * w;
+        const y = h - ((val / 100) * (h - 20));
+        if (i === 0) lossCtx.moveTo(x, y);
+        else lossCtx.lineTo(x, y);
+      });
+      lossCtx.stroke();
+
+      // Legend
+      lossCtx.fillStyle = '#f85149';
+      lossCtx.font = '12px sans-serif';
+      lossCtx.fillText('━ Loss', 10, 20);
+      lossCtx.fillStyle = '#3fb950';
+      lossCtx.fillText('━ Accuracy', 75, 20);
+    }
+
+    function startTraining() {
+      if (isTraining) return;
+
+      const lr = parseFloat(lrInput.value);
+      const layers = parseInt(layersInput.value);
+      const opt = document.getElementById('optimizer').value;
+      targetEpochs = parseInt(epochsInput.value);
+
+      isTraining = true;
+      currentEpoch = 0;
+      lossHistory = [];
+      accHistory = [];
+      trainBtn.disabled = true;
+      trainBtn.innerHTML = '⚙️ TRAINING IN PROGRESS...';
+
+      let currentLoss = 1.0;
+      let currentAcc = 10.0;
+
+      // Check for exploding gradient
+      const isExploding = lr > 0.2;
+      const isTooSlow = lr < 0.005;
+
+      const statusMsg = document.getElementById('status-msg');
+      statusMsg.className = 'status-warn';
+      statusMsg.textContent = '🔄 Model training in progress... Optimizing weights...';
+
+      function step() {
+        if (currentEpoch >= targetEpochs) {
+          isTraining = false;
+          trainBtn.disabled = false;
+          trainBtn.innerHTML = '🚀 TRAIN MODEL AGAIN';
+          drawNeuralNet(false);
+
+          if (isExploding) {
+            statusMsg.className = 'status-bad';
+            statusMsg.textContent = '❌ EXPLODING GRADIENT! Learning rate too high (α > 0.2). Model diverged!';
+          } else if (isTooSlow) {
+            statusMsg.className = 'status-warn';
+            statusMsg.textContent = '⚠️ SLOW CONVERGENCE! Learning rate too small. Increase α for faster convergence.';
+          } else {
+            statusMsg.className = 'status-good';
+            statusMsg.textContent = `🎉 EXCELLENT! Model Converged! Accuracy: ${currentAcc.toFixed(1)}% | Loss: ${currentLoss.toFixed(3)}`;
+          }
+          return;
+        }
+
+        currentEpoch++;
+
+        if (isExploding) {
+          currentLoss = Math.min(5.0, currentLoss + Math.random() * 0.4);
+          currentAcc = Math.max(5.0, currentAcc - Math.random() * 2.0);
+        } else {
+          const decayRate = opt === 'adam' ? 0.12 : (opt === 'rmsprop' ? 0.09 : 0.05);
+          currentLoss = Math.max(0.015, currentLoss * (1 - decayRate * (lr * 40)));
+          currentAcc = Math.min(99.8, currentAcc + (100 - currentAcc) * (decayRate * 0.8));
+        }
+
+        lossHistory.push(currentLoss);
+        accHistory.push(currentAcc);
+
+        document.getElementById('m-epoch').textContent = `${currentEpoch} / ${targetEpochs}`;
+        document.getElementById('m-loss').textContent = currentLoss.toFixed(3);
+        document.getElementById('m-acc').textContent = `${currentAcc.toFixed(1)}%`;
+
+        drawChart();
+        drawNeuralNet(true);
+
+        setTimeout(step, 60);
+      }
+
+      step();
+    }
+
+    drawNeuralNet(false);
+    drawChart();
+  </script>
+</body>
+</html>
