@@ -1,7 +1,7 @@
 <div align="center">
 
-  <!-- HERO ANIMATED VIDEO GIF -->
-  <img src="https://raw.githubusercontent.com/MilannSharma/MilannSharma/main/hero_video.gif" width="100%" alt="Hero Video Animation" style="border-radius:12px; border:2px solid #30363d; max-width:850px;" />
+  <!-- COMPACT TRANSPARENT HERO VIDEO ANIMATION -->
+  <img src="https://raw.githubusercontent.com/MilannSharma/MilannSharma/main/hero_video.gif" width="350" alt="Hero Animation" />
 
   <br/><br/>
 
