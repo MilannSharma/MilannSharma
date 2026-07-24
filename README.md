@@ -1,7 +1,7 @@
 <div align="center">
 
-  <!-- COMPACT TRANSPARENT HERO VIDEO ANIMATION -->
-  <img src="https://raw.githubusercontent.com/MilannSharma/MilannSharma/main/hero_video.gif" width="350" alt="Hero Animation" />
+  <!-- COMPACT TRANSPARENT HERO ANIMATION (INFINITE LOOP VERIFIED) -->
+  <img src="https://raw.githubusercontent.com/MilannSharma/MilannSharma/main/hero_animation.gif" width="350" alt="Hero Animation" />
 
   <br/><br/>
 
