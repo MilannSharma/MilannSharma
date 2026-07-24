@@ -1,6 +1,6 @@
 <div align="center">
 
-  <!-- LARGE EXTRA-BOLD WHITE PREMIUM TYPING HEADER AT TOP OF HERO -->
+  <!-- BOLD LARGE WHITE TYPING HEADER AT TOP OF HERO -->
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=36&pause=1000&color=FFFFFF&center=true&vCenter=true&width=850&height=80&lines=Hi+There!+I'm+Milan+Sharma+%F0%9F%91%8B;Technical+Product+Manager+%40+Schoollog+%F0%9F%92%BC;GenAI%2C+RAG+%26+Autonomous+Agents+Innovator+%F0%9F%A7%A0;Building+Scalable+AI+%26+Data+Systems+%F0%9F%9A%80" alt="Large Bold White Typing SVG" />
 
   <br/><br/>
@@ -42,26 +42,9 @@
 
 # 👨‍💻 Overview
 
-```python
-class MilanSharma:
-    def __init__(self):
-        self.name = "Milan Sharma"
-        self.role = "Technical Product Manager"
-        self.company = "Schoollog, Jaipur"
-        self.education = "B.Tech in AI & Data Science (2022-2026)"
-        self.core_focus = ["GenAI Products", "Autonomous Agents", "RAG Pipelines", "Scalable Data Platforms"]
-        self.contact = {
-            "email": "milansharma942105@gmail.com",
-            "location": "Jaipur, Rajasthan",
-            "portfolio": "https://milansharma.qzz.io"
-        }
-
-    def get_value_prop(self):
-        return "Bridging deep AI engineering with product management, OKRs, and 0-to-1 market execution."
-
-me = MilanSharma()
-print(me.get_value_prop())
-```
+<div align="center">
+  <img src="https://raw.githubusercontent.com/MilannSharma/MilannSharma/main/code_terminal.gif" width="100%" alt="Milan Sharma Python Terminal Simulation" style="border-radius:10px; max-width:850px;" />
+</div>
 
 ---
 
