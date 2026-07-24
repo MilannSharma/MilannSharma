@@ -1,9 +1,9 @@
 <div align="center">
 
-  <!-- CONTINUOUS ANIMATED TYPING HEADER (WHITE RETRO PIXEL / PREMIUM FONT AT TOP) -->
-  <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=20&pause=800&color=FFFFFF&center=true&vCenter=true&width=850&height=60&lines=HI+THERE!+I'M+MILAN+SHARMA+%F0%9F%91%8B;TECHNICAL+PRODUCT+MANAGER+%40+SCHOOLLOG;GENAI+%26+AUTONOMOUS+AGENTS+INNOVATOR;BUILDING+SCALABLE+AI+%26+DATA+SYSTEMS" alt="Continuous Pixel Typing SVG" />
+  <!-- BOLD LARGE WHITE PIXEL TYPING HEADER AT TOP OF HERO -->
+  <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&weight=700&size=26&pause=800&color=FFFFFF&center=true&vCenter=true&width=950&height=85&lines=HI+THERE!+I'M+MILAN+SHARMA+%F0%9F%91%8B;TECHNICAL+PRODUCT+MANAGER+%40+SCHOOLLOG;GENAI+%26+AUTONOMOUS+AGENTS+INNOVATOR;BUILDING+SCALABLE+AI+%26+DATA+SYSTEMS" alt="Large Bold White Pixel Typing SVG" />
 
-  <br/>
+  <br/><br/>
 
   <!-- COMPACT TRANSPARENT HERO ANIMATION -->
   <img src="https://raw.githubusercontent.com/MilannSharma/MilannSharma/main/hero_animation.gif" width="340" alt="Hero Animation" />
@@ -11,7 +11,7 @@
   <br/><br/>
 
   <p align="center">
-    <strong>Technical Product Manager • Coder & Innovator • GenAI & Data Platform Architect</strong>
+    <strong style="font-size: 1.2rem;">Technical Product Manager • Coder & Innovator • GenAI & Data Platform Architect</strong>
   </p>
 
   <!-- ACTION BUTTONS: RESUME, CHROME DINO, & ML TRAINER GAME -->
