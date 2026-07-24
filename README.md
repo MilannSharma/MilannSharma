@@ -1,12 +1,14 @@
 <div align="center">
 
-  <!-- COMPACT TRANSPARENT HERO ANIMATION (INFINITE LOOP VERIFIED) -->
-  <img src="https://raw.githubusercontent.com/MilannSharma/MilannSharma/main/hero_animation.gif" width="350" alt="Hero Animation" />
+  <!-- CONTINUOUS ANIMATED TYPING HEADER (WHITE RETRO PIXEL / PREMIUM FONT AT TOP) -->
+  <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=20&pause=800&color=FFFFFF&center=true&vCenter=true&width=850&height=60&lines=HI+THERE!+I'M+MILAN+SHARMA+%F0%9F%91%8B;TECHNICAL+PRODUCT+MANAGER+%40+SCHOOLLOG;GENAI+%26+AUTONOMOUS+AGENTS+INNOVATOR;BUILDING+SCALABLE+AI+%26+DATA+SYSTEMS" alt="Continuous Pixel Typing SVG" />
+
+  <br/>
+
+  <!-- COMPACT TRANSPARENT HERO ANIMATION -->
+  <img src="https://raw.githubusercontent.com/MilannSharma/MilannSharma/main/hero_animation.gif" width="340" alt="Hero Animation" />
 
   <br/><br/>
-
-  <!-- ANIMATED TYPING SVG HEADER -->
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=32&pause=1000&color=58A6FF&center=true&vCenter=true&width=850&height=70&lines=Hi+There!+I'm+Milan+Sharma+%F0%9F%91%8B;Technical+Product+Manager+%40+Schoollog+%F0%9F%92%BC;GenAI%2C+RAG+%26+Autonomous+Agents+Innovator+%F0%9F%A7%A0;Building+Scalable+AI+%26+Data+Systems+%F0%9F%9A%80" alt="Typing SVG" />
 
   <p align="center">
     <strong>Technical Product Manager • Coder & Innovator • GenAI & Data Platform Architect</strong>
