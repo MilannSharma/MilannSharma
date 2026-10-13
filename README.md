@@ -139,16 +139,24 @@
 
 ---
 
-# 📊 Analytics
+# 📊 Analytics & Activity
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=MilannSharma&theme=tokyonight&no-frame=false&no-background=true&margin-w=15" width="100%" alt="GitHub Trophies" />
+  <a href="https://github.com/MilannSharma">
+    <img src="https://streak-stats.demolab.com/?user=MilannSharma&theme=tokyonight&border_radius=10&date_format=j%20M%5B%20Y%5D" width="98%" alt="GitHub Streak Stats" />
+  </a>
 </div>
 
+<br/>
+
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=MilannSharma&show_icons=true&theme=tokyonight&count_private=true&border_radius=10" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MilannSharma&layout=compact&theme=tokyonight&border_radius=10" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=MilannSharma&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true&border_radius=10&rank_icon=github" width="48%" alt="Milan Sharma GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MilannSharma&layout=compact&theme=tokyonight&border_radius=10&hide=Jupyter%20Notebook" width="48%" alt="Top Languages" />
 </p>
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=MilannSharma&theme=tokyonight&no-frame=false&margin-w=10&row=1&column=7" width="98%" alt="GitHub Trophies" />
+</div>
 
 ---
 
